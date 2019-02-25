@@ -12,6 +12,6 @@ The dataset formed by tactile images can be found in this link:
 
 
 
-## Cite this work:
+## Cite this work
 
 
