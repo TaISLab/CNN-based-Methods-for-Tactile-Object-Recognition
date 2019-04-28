@@ -1,16 +1,20 @@
-%% TactResNet-6
+%% TactResNet METHOD
 %==========================================================================
 % Juan M. Gandarias, Jesús M. Gómez-de-Gabriel and Alfonso J. García-Cerezo
-% Robotics and Mechatronics Research Group
+% Telerobotics and Interactive Systems Lab
 % System Engineering and Automation Department
+% 20/03/2019
 % University of Málaga, Spain
-% 15/08/2018
 % -------------------------------------------------------------------------
-% To run this code the Neural Network Toolbox is needed. 
+% This code has been implemented using the Neural Network Toolbox. 
+% The script returns the confusion matrix as a result for the classification
+% of the tactile dataset saved in the 'Experiment_IEEE/Images' folder,
+% by using the TactResNet-6 approach.
 % =========================================================================
 
+
 clear
-%% TactNet-4 Network Architecture
+%% TactResNet Network Architecture
 load('tactResNet6.mat');
 
 %% Download Tactile Data (training and test)

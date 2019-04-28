@@ -1,4 +1,14 @@
 %% PLOT CONFUSION MATRIX
+%==========================================================================
+% Juan M. Gandarias, Jesús M. Gómez-de-Gabriel and Alfonso J. García-Cerezo
+% Telerobotics and Interactive Systems Lab
+% System Engineering and Automation Department
+% 20/03/2019
+% University of Málaga, Spain
+% -------------------------------------------------------------------------
+% Function to plot confusion matrices
+% =========================================================================
+
 function Plot_ConfMatrix_IEEE(Matrix)
 figure
 

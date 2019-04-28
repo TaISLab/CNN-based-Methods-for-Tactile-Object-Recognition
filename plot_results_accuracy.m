@@ -1,13 +1,12 @@
-%% TactNet
+%% PLOT RESULTS ACCURACY
 %==========================================================================
 % Juan M. Gandarias, Jesús M. Gómez-de-Gabriel and Alfonso J. García-Cerezo
-% Robotics and Mechatronics Research Group
+% Telerobotics and Interactive Systems Lab
 % System Engineering and Automation Department
+% 20/03/2019
 % University of Málaga, Spain
-% 15/08/2018
 % -------------------------------------------------------------------------
-% This scrip plot the results of the mean recognition rates and the 
-% classification time of each method 
+% This script plots the results of the classification experiments.
 % =========================================================================
 
 %% Load the results
@@ -242,4 +241,98 @@ grid on
 yyaxis right
 plot(1:11,time_GPU, 'r-^');
 ylabel('t_{GPU} [s]')
+
+%% Plot results of  different resolutions accuracy
+
+mean_tactNet6half = mean([93.64 92.73 94.09 91.64 97.27 92.27 91.82 95.91 91.36...
+    95.45 90.91 94.09 91.36 94.09 95.91 95.91 91.82 93.18 91.82 91.36]);
+std_tactNet6half = std([93.64 92.73 94.09 91.64 97.27 92.27 91.82 95.91 91.36...
+    95.45 90.91 94.09 91.36 94.09 95.91 95.91 91.82 93.18 91.82 91.36]);
+
+mean_tactNet6fourth = mean([85.45 89.55 85.00 83.18 85.00 84.09 81.36 84.55 86.36 ...
+    81.82 88.18 85.45 83.18 83.64 86.82 86.82 90.45 82.27 80.45 83.18]);
+std_tactNet6fourth = std([85.45 89.55 85.00 83.18 85.00 84.09 81.36 84.55 86.36 ...
+    81.82 88.18 85.45 83.18 83.64 86.82 86.82 90.45 82.27 80.45 83.18]);
+
+mean_tactNet6half_2 = mean([93.18 95.91 91.36 94.55 92.73 95.91 92.73 93.18 95.91...
+    93.18 91.36 93.18 93.18 94.09 93.64 95 93.64 90.45 93.64 91.36]);
+std_tactNet6half_2 = std([93.18 95.91 91.36 94.55 92.73 95.91 92.73 93.18 95.91...
+    93.18 91.36 93.18 93.18 94.09 93.64 95 93.64 90.45 93.64 91.36]);
+
+mean_tactNet6fourth_2 = mean([85.45 90.45 84.55 86.82 87.73 88.18 90.91 90.45 87.27...
+    89.09 88.64 86.82 85.45 86.82 88.18 84.55 88.18 84.09 84.09 91.82]);
+std_tactNet6fourth_2 = std([85.45 90.45 84.55 86.82 87.73 88.18 90.91 90.45 87.27...
+    89.09 88.64 86.82 85.45 86.82 88.18 84.55 88.18 84.09 84.09 91.82]);
+
+mean_resNet_NNhalf = mean([94.55 93.64 94.09 96.82 95.91 93.36 95.91 95.00 94.55...
+    97.27 94.55 94.09 93.64 95.91 96.36 96.82 96.36 96.36 94.55 95.91]);
+std_resNet_NNhalf = std([94.55 93.64 94.09 96.82 95.91 93.36 95.91 95.00 94.55...
+    97.27 94.55 94.09 93.64 95.91 96.36 96.82 96.36 96.36 94.55 95.91]);
+
+mean_resNet_NNfourth = mean([87.73 88.18 87.27 85.45 90.00 88.64 87.73 89.55 87.27 ...
+    86.82 86.82 88.64 86.36 88.64 85.45 84.55 86.82 87.27 87.27 87.73]);
+std_resNet_NNfourth = std([87.73 88.18 87.27 85.45 90.00 88.64 87.73 89.55 87.27 ...
+    86.82 86.82 88.64 86.36 88.64 85.45 84.55 86.82 87.27 87.27 87.73]);
+
+mean_resNet_NNhalf_2 = mean([95.45 94.09 96.36 95.91 95.91 94.09 96.36 96.82 96.36...
+    94.09 94.09 96.36 93.64 95 93.64 95.91 95.91 96.82 94.09 95.91]);
+std_resNet_NNhalf_2 = std([95.45 94.09 96.36 95.91 95.91 94.09 96.36 96.82 96.36...
+    94.09 94.09 96.36 93.64 95 93.64 95.91 95.91 96.82 94.09 95.91]);
+
+mean_resNet_NNfourth_2 = mean([95.45 92.27 96.82 92.27 94.55 93.64 93.64 94.55 97.27...
+    93.64 93.64 95.45 95.91 94.09 93.18 93.18 94.09 94.09 91.82 94.09]);
+std_resNet_NNfourth_2 = std([95.45 92.27 96.82 92.27 94.55 93.64 93.64 94.55 97.27...
+    93.64 93.64 95.45 95.91 94.09 93.18 93.18 94.09 94.09 91.82 94.09]);
+
+mean_VGG16_SVMhalf = mean([86.82 90.00 92.73 88.64 89.09 88.18 89.55 82.27 88.64 ...
+    85.45 90.00 86.36 89.09 84.09 83.64 90.91 81.36 89.09 89.55 56.82]);
+std_VGG16_SVMhalf = std([86.82 90.00 92.73 88.64 89.09 88.18 89.55 82.27 88.64 ...
+    85.45 90.00 86.36 89.09 84.09 83.64 90.91 81.36 89.09 89.55 56.82]);
+
+mean_VGG16_SVMfourth = mean([50.45 55.00 70.00 60.00 62.73 70.00 73.18 68.64 66.82 ...
+    70.91 64.27 60.00 70.91 70.00 68.18 71.82 65.91 74.09 65.00 68.55]);
+std_VGG16_SVMfourth = std([50.45 55.00 70.00 60.00 62.73 70.00 73.18 68.64 66.82 ...
+    70.91 64.27 60.00 70.91 70.00 68.18 71.82 65.91 74.09 65.00 68.55]);
+
+mean_VGG16_SVMhalf_2 = mean([90 93.18 93.64 91.36 94.55 91.36 92.73 92.73 92.27...
+    90 94.55 92.73 91.82 93.64 92.27 95.45 90.45 92.27 92.73 92.73]);
+std_VGG16_SVMhalf_2 = std([90 93.18 93.64 91.36 94.55 91.36 92.73 92.73 92.27...
+    90 94.55 92.73 91.82 93.64 92.27 95.45 90.45 92.27 92.73 92.73]);
+
+mean_VGG16_SVMfourth_2 = mean([80.45 85.45 80.45 82.27 82.73 80.49 80.49 88.64 88.64...
+    85.91 82.27 81.36 80 86.82 82.27 80.91 89.55 83.64 81.36 84.55]);
+std_VGG16_SVMfourth_2 = std([80.45 85.45 80.45 82.27 82.73 80.49 80.49 88.64 88.64...
+    85.91 82.27 81.36 80 86.82 82.27 80.91 89.55 83.64 81.36 84.55]);
+
+%%
+
+all_mean_tactNet6 = [mean_tactNet6fourth mean_tactNet6fourth_2 mean_tactNet6half...
+    mean_tactNet6half_2  mean_tactNet6(3)];
+all_std_tactNet6 = [std_tactNet6fourth std_tactNet6fourth_2 std_tactNet6half...
+    std_tactNet6half_2  std_tacNet6(3)];
+
+all_mean_resNet_NN = [mean_resNet_NNfourth mean_resNet_NNfourth_2 mean_resNet_NNhalf...
+    mean_resNet_NNhalf_2 mean(res_nn_acc)];
+all_std_resNet_NN = [std_resNet_NNfourth std_resNet_NNfourth_2 std_resNet_NNhalf...
+    std_resNet_NNhalf_2 std(res_nn_acc)];
+
+all_mean_VGG16 = [mean_VGG16_SVMfourth mean_VGG16_SVMfourth_2 mean_VGG16_SVMhalf...
+    mean_VGG16_SVMhalf_2 mean(vgg_svm_acc)];
+all_std_VGG16 = [std_VGG16_SVMfourth std_VGG16_SVMfourth_2 std_VGG16_SVMhalf...
+    std_VGG16_SVMhalf_2 std(vgg_svm_acc)];
+
+% Recognition-Rate global 15 classes rigid
+figure
+errorbar([91 180 350 700 1400],all_mean_tactNet6,all_std_tactNet6,'b-','LineWidth', 1)
+hold on
+errorbar([91 180 350 700 1400],all_mean_resNet_NN,all_std_resNet_NN,'g-','LineWidth', 1)
+hold on
+errorbar([91 180 350 700 1400],all_mean_VGG16,all_std_VGG16,'r-','LineWidth', 1)
+legend('TactNet-6','ResNet-NN','VGG16-SVM');
+ylabel('Mean Recognition Rate [%]')
+xlabel('Number of tactels')
+xticks([91 180 350 700 1400])
+ylim([59 100])
+xlim([0 1430])
+grid on
 

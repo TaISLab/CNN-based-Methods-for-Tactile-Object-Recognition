@@ -37,7 +37,7 @@ countEachLabel(images);
 [trainingSet, validationSet] = splitEachLabel(trainingSet, 0.8, 'randomize');
 
 %% Pre-process Images For CNN
-% AlexNet can only process RGB images that are 227-by-227.
+% SqueezeNet can only process RGB images that are 227-by-227.
 
 % Set the ImageDatastore ReadFcn
 trainingSet.ReadFcn = @(filename)readAndPreprocessImage_227(filename);
@@ -89,4 +89,4 @@ Plot_ConfMatrix(confMatrix)
 %% Display the mean accuracy
 mean(diag(confMatrix))
 
-% save('AlexNet_SVM_ws');
+% save('SqueezeNet_SVM_ws');

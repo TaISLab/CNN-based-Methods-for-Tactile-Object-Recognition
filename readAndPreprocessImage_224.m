@@ -1,20 +1,32 @@
-    function Iout = readAndPreprocessImage(filename)
+%% CONVERT TACTILE IMAGES TO 224x224x3
+%==========================================================================
+% Juan M. Gandarias, Jesús M. Gómez-de-Gabriel and Alfonso J. García-Cerezo
+% Telerobotics and Interactive Systems Lab
+% System Engineering and Automation Department
+% 20/03/2019
+% University of Málaga, Spain
+% -------------------------------------------------------------------------
+% This script converts tactile images into 224x224x3 images
+% =========================================================================
 
-        I = imread(filename);
 
-        % Some images may be grayscale. Replicate the image 3 times to
-        % create an RGB image.
-        if ismatrix(I)
-            I = cat(3,I,I,I);
-        end
+function Iout = readAndPreprocessImage_224(filename)
 
-        % Resize the image as required for the CNN.
-        Iout = imresize(I, [224 224]);
+    I = imread(filename);
 
-        % Note that the aspect ratio is not preserved. In Caltech 101, the
-        % object of interest is centered in the image and occupies a
-        % majority of the image scene. Therefore, preserving the aspect
-        % ratio is not critical. However, for other data sets, it may prove
-        % beneficial to preserve the aspect ratio of the original image
-        % when resizing.
+    % Some images may be grayscale. Replicate the image 3 times to
+    % create an RGB image.
+    if ismatrix(I)
+        I = cat(3,I,I,I);
     end
+
+    % Resize the image as required for the CNN.
+    Iout = imresize(I, [224 224]);
+
+    % Note that the aspect ratio is not preserved. In Caltech 101, the
+    % object of interest is centered in the image and occupies a
+    % majority of the image scene. Therefore, preserving the aspect
+    % ratio is not critical. However, for other data sets, it may prove
+    % beneficial to preserve the aspect ratio of the original image
+    % when resizing.
+end

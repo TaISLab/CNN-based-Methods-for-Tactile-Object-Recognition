@@ -1,14 +1,13 @@
-%% TACTILENET
+%% PLOT TRAINING RESULTS
 %==========================================================================
 % Juan M. Gandarias, Jesús M. Gómez-de-Gabriel and Alfonso J. García-Cerezo
-% Robotics and Mechatronics Research Group
+% Telerobotics and Interactive Systems Lab
 % System Engineering and Automation Department
+% 20/03/2019
 % University of Málaga, Spain
-% 15/03/2018
 % -------------------------------------------------------------------------
-% To run this code, the Neural Network Toolbox is needed. 
+% This script plots the results of the learning process
 % =========================================================================
-
 
 %% TactileNet4
 clear

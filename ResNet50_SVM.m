@@ -1,22 +1,22 @@
-%% AlexNet_SVM METHOD
+%% RESNET_SVM METHOD
 %==========================================================================
 % Juan M. Gandarias, Jesús M. Gómez-de-Gabriel and Alfonso J. García-Cerezo
-% Robotics and Mechatronics Research Group
+% Telerobotics and Interactive Systems Lab
 % System Engineering and Automation Department
-% 15/08/2018
+% 20/03/2019
 % University of Málaga, Spain
 % -------------------------------------------------------------------------
 % This code has been implemented using the Neural Network Toolbox. 
 % The script returns the confusion matrix as a result for the classification
 % of the tactile dataset saved in the 'Experiment_IEEE/Images' folder,
-% by using the AlexNetN-SVM approach.
+% by using the ResNet-SVM approach.
 % =========================================================================
 
 % Clear the workspace
 clear
 
 %% Load a  Pre-trained CNN
-% AlexNet has been trained on the ImageNet dataset previously, which has 
+% ResNet has been trained on the ImageNet dataset previously, which has 
 % 1000 object categories and 1.2 million training images
 convnet = resnet50;
 layersTransfer = convnet.Layers(1:end-3);
@@ -37,7 +37,7 @@ countEachLabel(images);
 [trainingSet, validationSet] = splitEachLabel(trainingSet, 0.8, 'randomize');
 
 %% Pre-process Images For CNN
-% AlexNet can only process RGB images that are 227-by-227.
+% ResNet can only process RGB images that are 227-by-227.
 
 % Set the ImageDatastore ReadFcn
 trainingSet.ReadFcn = @(filename)readAndPreprocessImage_224(filename);
@@ -89,4 +89,4 @@ Plot_ConfMatrix(confMatrix)
 %% Display the mean accuracy
 mean(diag(confMatrix))
 
-% save('AlexNet_SVM_ws');
+% save('ResNet_SVM_ws');

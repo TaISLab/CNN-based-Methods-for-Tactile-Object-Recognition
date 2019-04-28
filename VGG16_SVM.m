@@ -1,17 +1,21 @@
 %% VGG16_SVM METHOD
 %==========================================================================
 % Juan M. Gandarias, Jesús M. Gómez-de-Gabriel and Alfonso J. García-Cerezo
-% Robotics and Mechatronics Research Group
+% Telerobotics and Interactive Systems Lab
 % System Engineering and Automation Department
-% 15/08/2018
+% 20/03/2019
 % University of Málaga, Spain
 % -------------------------------------------------------------------------
-
+% This code has been implemented using the Neural Network Toolbox. 
+% The script returns the confusion matrix as a result for the classification
+% of the tactile dataset saved in the 'Experiment_IEEE/Images' folder,
+% by using the VGG16-SVM approach.
+% =========================================================================
 convnet = vgg16;
 layersTransfer = convnet.Layers(1:end-3);
 
 %% Download Tactile Data (training and test)
-images_dir = fullfile('Experiment_IEEE/Images');
+images_dir = fullfile('Experiment_IEEE/Images_halfRes');
 
 images = imageDatastore(images_dir,'IncludeSubfolders',true,'LabelSource',...
     'foldernames','FileExtensions','.jpg');
@@ -72,7 +76,7 @@ confMat = confusionmat(testLabels, predictedLabels);
 
 % Convert confusion matrix into percentage form
 confMatrix = bsxfun(@rdivide,confMat,sum(confMat,2));
-Plot_ConfMatrix(confMatrix)
+% Plot_ConfMatrix(confMatrix)
 
 %% Display the mean accuracy
 mean(diag(confMatrix))

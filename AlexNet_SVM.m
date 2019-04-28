@@ -1,9 +1,9 @@
 %% AlexNet_SVM METHOD
 %==========================================================================
 % Juan M. Gandarias, Jesús M. Gómez-de-Gabriel and Alfonso J. García-Cerezo
-% Robotics and Mechatronics Research Group
+% Telerobotics and Interactive Systems Lab
 % System Engineering and Automation Department
-% 15/08/2018
+% 20/03/2019
 % University of Málaga, Spain
 % -------------------------------------------------------------------------
 % This code has been implemented using the Neural Network Toolbox. 

@@ -1,22 +1,22 @@
-%% AlexNet_NN METHOD
+%% RESNET_NN METHOD
 %==========================================================================
 % Juan M. Gandarias, Jesús M. Gómez-de-Gabriel and Alfonso J. García-Cerezo
-% Robotics and Mechatronics Research Group
+% Telerobotics and Interactive Systems Lab
 % System Engineering and Automation Department
-% 15/08/2018
+% 20/03/2019
 % University of Málaga, Spain
 % -------------------------------------------------------------------------
 % This code has been implemented using the Neural Network Toolbox. 
 % The script returns the confusion matrix as a result for the classification
 % of the tactile dataset saved in the 'Experiment_IEEE/Images' folder,
-% by using the AlexNet-NN approach.
+% by using the ResNet-NN approach.
 % =========================================================================
 
 % Clear the workspace
 clear
 
 %% Load a  Pre-trained CNN
-% AlexNet has been trained on the ImageNet dataset previously, which has 
+% ResNet has been trained on the ImageNet dataset previously, which has 
 % 1000 object categories and 1.2 million training images
 load('pretrain_ResNet.mat');
 
@@ -38,7 +38,7 @@ countEachLabel(images);
 numClasses = numel(categories(trainingSet.Labels));
 
 %% Pre-process Images For CNN
-% AlexNet can only process RGB images that are 227-by-227.
+% ResNet can only process RGB images that are 227-by-227.
 
 % Set the ImageDatastore ReadFcn
 trainingSet.ReadFcn = @(filename)readAndPreprocessImage_224(filename);
@@ -79,4 +79,4 @@ recognition_rate = mean(diag(confMatrix));
 
 
 %% Save the workspace
-% save('training_AlexNet_NN_ws')
+% save('training_resNet_NN_ws')
