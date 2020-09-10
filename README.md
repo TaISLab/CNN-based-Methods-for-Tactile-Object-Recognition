@@ -13,5 +13,14 @@ The dataset formed by tactile images can be found in this link: http://www.taisl
 
 
 ## Cite this work
-Juan M. Gandarias, Alfonso J. García-Cerezo and Jesús M. Gómez-de-Gabriel, "CNN-based Methods for Object Recognition with High-Resolution Tactile Sensors", IEEE Sensors Journal, 2019.
+J.M. Gandarias, A.J. Garcia-Cerezo, and J.M. Gomez-de-Gabriel, “CNN-based methods for object recognition with high-resolution tactile sensors”, IEEE Sensors Journal, 19(16), 6872-6882, 2019
 
+@article{gandarias2019cnn,
+  title={CNN-based methods for object recognition with high-resolution tactile sensors},
+  author={Gandarias, Juan M and Garcia-Cerezo, Alfonso J and Gomez-de-Gabriel, Jesus M},
+  journal={IEEE Sensors Journal},
+  volume={19},
+  number={16},
+  pages={6872--6882},
+  year={2019},
+}
