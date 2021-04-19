@@ -10,8 +10,13 @@ For more details, please visit: https://doi.org/10.1109/JSEN.2019.2912968
 
 
 ## Dataset
-The dataset formed by tactile images can be found in this link: http://www.taislab.uma.es/tactile-images-dataset/
+The dataset formed by tactile images can be found in this link: https://drive.google.com/file/d/1N-He8pv-XD9bgjAgo0KDFq3YJJOx2f0P/view?usp=sharing
 
+
+## Recent work
+If you are interested on tactile perception and tactile object recognition, please check out newest works on: 
+- Multimodal haptic object recognition: https://github.com/fpastorm/LSTM-Haptic-Fusion (paper: https://doi.org/10.1109/LRA.2020.3038377)
+- Tactile object recognition with 3D convnets: (paper: https://doi.org/10.3390/s19245356)
 
 
 ## Cite this work
