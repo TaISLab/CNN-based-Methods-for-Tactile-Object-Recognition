@@ -5,18 +5,18 @@
 ## Abstract
 Novel high-resolution pressure-sensor arrays allow treating pressure readings as standard images. Computer vision algorithms and methods such as Convolutional Neural Networks (CNN) can be used to identify contact objects. In this work, a high-resolution tactile sensor has been attached to a robotic end-effector to identify contacted objects. Two CNN-based approaches have been employed to classify pressure images. These methods include a transfer learning approach using a pre-trained CNN on an RGB-images dataset and a custom-made CNN (TactNet) trained from scratch with tactile information. The transfer learning approach can be carried out by retraining the classification layers of the network or replacing these layers with an SVM. Overall, 11 configurations based on these methods have been tested: 8 transfer learning-based, and 3 TactNet-based.
 
-For more details, please visit: https://doi.org/10.1109/JSEN.2019.2912968
+For more details, please see [the paper](https://doi.org/10.1109/JSEN.2019.2912968).
 
 
 
 ## Dataset
-The dataset formed by tactile images can be found in this link: https://drive.google.com/file/d/1N-He8pv-XD9bgjAgo0KDFq3YJJOx2f0P/view?usp=sharing
+The dataset formed by tactile images is included in the repo and can be downloaded [here](https://github.com/TaISLab/CNN-based-Methods-for-Tactile-Object-Recognition/raw/master/Tactile_Images_Dataset.zip).
 
 
 ## Recent work
 If you are interested on tactile perception and tactile object recognition, please check out newest works on: 
-- Multimodal haptic object recognition: https://github.com/fpastorm/LSTM-Haptic-Fusion (paper: https://doi.org/10.1109/LRA.2020.3038377)
-- Tactile object recognition with 3D convnets: (paper: https://doi.org/10.3390/s19245356)
+- Multimodal haptic object recognition: [Github repo](https://github.com/fpastorm/LSTM-Haptic-Fusion), [Paper](https://doi.org/10.1109/LRA.2020.3038377)
+- Tactile object recognition with 3D convnets: [paper](https://doi.org/10.3390/s19245356)
 
 
 ## Cite this work
